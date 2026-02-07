@@ -51,6 +51,11 @@ Notes for cadence
     - N dummy -> every nets to VSS
     - P dummy -> every nets to VDD
 
+- if there is limited space between Source and Drain (mainly for Vias connections), extend the followings
+    >`Ldiff_ext`, `Rdiff_ext`, `LGA_CO_SP_INC`, `RGA_CO_SP_INC`
+    
+    under tsmcN65 PDK, 25n is a sensible value that ensures the min DRC clearance for gate-poly and vias between source/drain
+
 ## common shortcuts
 - `esc` or `<Ctrl-D>`: deselect all
 - `v` only visible
@@ -60,5 +65,7 @@ Notes for cadence
 - `F5` highlight DRC in Calibre; `F4` cancel highlight DRC 
 - `N` change movement constraint (latitute, longtitute, orthogonal, free)
 
-## DRC parameters
-`M1` to `M1`: 0.09
+## Handy numbers
+- `M1` to `M1`: 0.09
+- distance between PMOS and NMOS=**0.68**
+- distance between two `PO`=**0.13**
